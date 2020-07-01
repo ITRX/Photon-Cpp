@@ -1,3 +1,6 @@
+#ifndef _MAIN_H_
+#define _MAIN_H_
+
 #define NO_S3D_USING
 #include <Siv3D.hpp>
 
@@ -10,9 +13,7 @@
 
 #include <iostream>
 #include <list>
-
-#ifndef _MAIN_H_
-#define _MAIN_H_
+#include <string>
 
 using std::cout;
 using std::endl;
@@ -24,6 +25,8 @@ using ExitGames::Common::JVector;
 using ExitGames::Common::Hashtable;
 using ExitGames::Common::Object;
 using ExitGames::Common::Dictionary;
+using ExitGames::Common::CustomType;
+using ExitGames::Common::CustomTypeFactory;
 using ExitGames::LoadBalancing::Player;
 using ExitGames::LoadBalancing::LobbyStatsResponse;
 using ExitGames::LoadBalancing::Room;
@@ -31,5 +34,7 @@ using ExitGames::LoadBalancing::RoomOptions;
 
 extern bool serverConnected;
 extern bool joinRoom;
+
+#include "SPoint.h"
 
 #endif

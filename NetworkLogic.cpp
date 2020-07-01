@@ -3,8 +3,7 @@
 NetworkLogic::NetworkLogic(const JString& appID, const JString& appVersion){
     mLoadBalancingClient = new ExitGames::LoadBalancing::Client(mListener, appID, appVersion, ExitGames::Photon::ConnectionProtocol::TCP);
     
-    runCount = 0;
-    recieveCount = 0;
+    received = false;
 }
 
 NetworkLogic::~NetworkLogic(){ 
@@ -37,4 +36,8 @@ void NetworkLogic::JoinOrCreateRoom(const JString& roomName, nByte maxPlayers) {
     ro.setMaxPlayers(maxPlayers);
     ro.setDirectMode(ExitGames::LoadBalancing::DirectMode::ALL_TO_ALL);
     mLoadBalancingClient->opJoinOrCreateRoom(roomName, ro);
+}
+
+bool NetworkLogic::isReceive(){
+    return received;
 }

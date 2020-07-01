@@ -40,8 +40,6 @@ void Listener::leaveRoomEventAction(int playerNr, bool isInactive){
 }
 
 void Listener::customEventAction(int playerNr, nByte eventCode, const Object& eventContent){
-    s3d::ClearPrint();
-    s3d::Print << U"customEventAction";// << endl;
     receiveData.push_back(eventContent);
 }
 

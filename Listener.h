@@ -1,7 +1,7 @@
-#include "Main.h"
-
 #ifndef _LISTENER_H_
 #define _LISTENER_H_
+
+#include "Main.h"
 
 class Listener : public ExitGames::LoadBalancing::Listener {
 private:
